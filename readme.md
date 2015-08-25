@@ -7,13 +7,8 @@ Given a line in Cartesian System, calculate its length.
     -JDK 1.8.0
     -Ant
 
-##Steps to Build:
-    1. ant compile
-    2 .ant jar
-
-##Steps to Deploy:
-    ant run
-
+##Steps to Build and Deploy:
+    ant
 
 
 
