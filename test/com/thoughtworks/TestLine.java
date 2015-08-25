@@ -10,4 +10,10 @@ public class TestLine {
         Line line = new Line();
         Assert.assertEquals(1.0, line.calculateLength(), 0.001);
     }
+
+    @Test
+    public void fromZeroZeroToZeroTwohasLengthTwo(){
+        Line line = new Line();
+        Assert.assertEquals(1.0, line.calculateLength(), 0.001);
+    }
 }
