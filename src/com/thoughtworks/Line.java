@@ -12,6 +12,6 @@ public class Line {
     }
 
     public double calculateLength() {
-        return 10.0;
+        return Math.sqrt(Math.pow(x1 - x2, 2)+Math.pow(y1-y2, 2));
     }
 }
