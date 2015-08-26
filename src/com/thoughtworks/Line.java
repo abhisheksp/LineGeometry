@@ -2,6 +2,7 @@ package com.thoughtworks;
 
 
 public class Line {
+
     private int x1, x2, y1, y2;
 
     public Line(int x1, int y1, int x2, int y2) {
@@ -15,8 +16,8 @@ public class Line {
         return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
     }
 
-    public boolean isEqualTo(Line line){
-        return line.x1 == this.x1 && line.y1 == this.y1 && line.x2 == this.x2 &&line.y2 == this.y2;
+    public boolean equals(Line line){
+        return (line.x1 == this.x1 && line.y1 == this.y1 && line.x2 == this.x2 && line.y2 == this.y2) ||
+                (line.x1 == this.x2 && line.y1 == this.y2 && line.x2 == this.x1 && line.y2 == this.y1);
     }
-
 }
