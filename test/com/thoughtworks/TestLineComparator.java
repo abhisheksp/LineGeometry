@@ -23,4 +23,10 @@ public class TestLineComparator {
         LineComparator lineComparator = new LineComparator(new Line(0, 0, 1, 1), new Line(0, 0, 1, 1));
         Assert.assertEquals(true, lineComparator.checkIfEqual());
     }
+
+    @Test
+    public void shouldReturnTrueComparingALinetoAnotherLineWithInterchangedCoordinates() {
+        LineComparator lineComparator = new LineComparator(new Line(0, 0, 1, 1), new Line(1, 1, 0, 0));
+        Assert.assertEquals(true, lineComparator.checkIfEqual());
+    }
 }
