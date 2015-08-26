@@ -2,7 +2,7 @@ package com.thoughtworks;
 
 public class Line {
 
-    public int x1, x2, y1, y2;
+    private int x1, x2, y1, y2;
 
     public Line(int x1, int y1, int x2, int y2) {
         this.x1 = x1;

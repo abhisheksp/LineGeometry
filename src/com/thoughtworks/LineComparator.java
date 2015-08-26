@@ -10,7 +10,7 @@ public class LineComparator {
     }
 
     public boolean checkIfEqual() {
-        return (line1.x1 == line2.x1 && line1.y1 == line2.y1 && line1.x2 == line2.x2 && line1.y2 == line2.y2) ||
-                (line1.x1 == line2.x2 && line1.y1 == line2.y2 && line1.x2 == line2.x1 && line1.y2 == line2.y1);
+        return line1.x1() == line2.x1() && line1.y1() == line2.y1() && line1.x2() == line2.x2() && line1.y2() == line2.y2() ||
+                line1.x1() == line2.x2() && line1.y1() == line2.y2() && line1.x2() == line2.x1() && line1.y2() == line2.y1();
     }
 }

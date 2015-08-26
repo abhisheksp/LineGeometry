@@ -6,43 +6,43 @@ import org.junit.Assert;
 public class TestLine {
 
     @Test
-    public void shouldHaveLengthZeroHavingSameEndPointsInQuadrantOne(){
+    public void shouldHaveLengthZeroHavingSameEndPointsInQuadrantOne() {
         Line line = new Line(1, 1, 1, 1);
         Assert.assertEquals(0.0, line.length(), 0.001);
     }
 
     @Test
-    public void shouldHaveLengthZeroHavingSameEndPointsInQuadrantTwo(){
+    public void shouldHaveLengthZeroHavingSameEndPointsInQuadrantTwo() {
         Line line = new Line(-1, 1, -1, 1);
         Assert.assertEquals(0.0, line.length(), 0.001);
     }
 
     @Test
-    public void shouldHaveLengthZeroHavingSameEndPointsInQuadrantThree(){
+    public void shouldHaveLengthZeroHavingSameEndPointsInQuadrantThree() {
         Line line = new Line(-1, -1, -1, -1);
         Assert.assertEquals(0.0, line.length(), 0.001);
     }
 
     @Test
-    public void shouldHaveLengthZeroHavingSameEndPointsInQuadrantFour(){
+    public void shouldHaveLengthZeroHavingSameEndPointsInQuadrantFour() {
         Line line = new Line(1, -1, 1, -1);
         Assert.assertEquals(0.0, line.length(), 0.001);
     }
 
     @Test
-    public void shouldHaveLengthAsAbsoluteDiffrenceOfThierAbsiccaWhenThierOrdinatesAreSame(){
+    public void shouldHaveLengthAsAbsoluteDiffrenceOfThierAbsiccaWhenThierOrdinatesAreSame() {
         Line line = new Line(1, 1, 3, 1);
-        Assert.assertEquals(3-1, line.length(), 0.001);
+        Assert.assertEquals(3 - 1, line.length(), 0.001);
     }
 
     @Test
-    public void shouldHaveLengthAsAbsoluteDiffrenceOfThierOrdinateWhenThierAbsiccaAreSame(){
+    public void shouldHaveLengthAsAbsoluteDiffrenceOfThierOrdinateWhenThierAbsiccaAreSame() {
         Line line = new Line(1, 3, 1, 5);
-        Assert.assertEquals(5-3, line.length(), 0.001);
+        Assert.assertEquals(5 - 3, line.length(), 0.001);
     }
 
     @Test
-    public void shouldHaveLengthAsRootOfSumOfSquaresOfDiffrenceOfOrdinatesAndAbsiccaOfEndPoints(){
+    public void shouldHaveLengthAsRootOfSumOfSquaresOfDiffrenceOfOrdinatesAndAbsiccaOfEndPoints() {
         Line line = new Line(1, 3, 8, 5);
         Assert.assertEquals(7.28010, line.length(), 0.001);
     }
