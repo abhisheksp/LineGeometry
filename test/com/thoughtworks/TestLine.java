@@ -28,5 +28,11 @@ public class TestLine {
         Line line = new Line(1, -1, 1, -1);
         Assert.assertEquals(0.0, line.calculateLength(), 0.001);
     }
-    
+
+    @Test
+    public void shouldHaveLengthAsDiffrenceOfThierAbsiccaWhenThierOrdinatesAreSame(){
+        Line line = new Line(1, 1, 3, 1);
+        Assert.assertEquals(3-1, line.calculateLength(), 0.001);
+    }
+
 }

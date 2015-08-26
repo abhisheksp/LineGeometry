@@ -12,6 +12,6 @@ public class Line {
     }
 
     public double calculateLength() {
-        return 0.0;
+        return Math.abs(x1-x2);
     }
 }
