@@ -30,9 +30,14 @@ public class TestLine {
     }
 
     @Test
-    public void shouldHaveLengthAsDiffrenceOfThierAbsiccaWhenThierOrdinatesAreSame(){
+    public void shouldHaveLengthAsAbsoluteDiffrenceOfThierAbsiccaWhenThierOrdinatesAreSame(){
         Line line = new Line(1, 1, 3, 1);
         Assert.assertEquals(3-1, line.calculateLength(), 0.001);
     }
 
+    @Test
+    public void shouldHaveLengthAsAbsoluteDiffrenceOfThierOrdinateWhenThierAbsiccaAreSame(){
+        Line line = new Line(1, 3, 1, 5);
+        Assert.assertEquals(5-3, line.calculateLength(), 0.001);
+    }
 }

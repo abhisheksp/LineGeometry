@@ -12,6 +12,11 @@ public class Line {
     }
 
     public double calculateLength() {
-        return Math.abs(x1-x2);
+        if( y1 == y2)
+            return Math.abs(x1 - x2);
+        else if( x1 == x2)
+            return Math.abs(y1 - y2);
+        else
+            return 0.0;
     }
 }
