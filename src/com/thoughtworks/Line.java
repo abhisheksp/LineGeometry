@@ -1,9 +1,8 @@
 package com.thoughtworks;
 
-
 public class Line {
 
-    private int x1, x2, y1, y2;
+    public int x1, x2, y1, y2;
 
     public Line(int x1, int y1, int x2, int y2) {
         this.x1 = x1;
@@ -12,12 +11,23 @@ public class Line {
         this.y2 = y2;
     }
 
-    public double length() {
-        return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
+    public int x1() {
+        return x1;
     }
 
-    public boolean equals(Line line){
-        return (line.x1 == this.x1 && line.y1 == this.y1 && line.x2 == this.x2 && line.y2 == this.y2) ||
-                (line.x1 == this.x2 && line.y1 == this.y2 && line.x2 == this.x1 && line.y2 == this.y1);
+    public int x2() {
+        return x2;
+    }
+
+    public int y1() {
+        return y1;
+    }
+
+    public int y2() {
+        return y2;
+    }
+
+    public double length() {
+        return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
     }
 }
