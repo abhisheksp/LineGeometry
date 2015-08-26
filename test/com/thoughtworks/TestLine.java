@@ -40,4 +40,10 @@ public class TestLine {
         Line line = new Line(1, 3, 1, 5);
         Assert.assertEquals(5-3, line.calculateLength(), 0.001);
     }
+
+    @Test
+    public void shouldHaveLengthAsRootOfSumOfSquaresOfDiffrenceOfOrdinatesAndAbsiccaOfEndPoints(){
+        Line line = new Line(1, 3, 8, 5);
+        Assert.assertEquals(7.28010, line.calculateLength(), 0.001);
+    }
 }

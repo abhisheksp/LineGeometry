@@ -12,11 +12,14 @@ public class Line {
     }
 
     public double calculateLength() {
-        if( y1 == y2)
+        if(x1 == x2 && y1 == y2){
+            return 0.0;
+        }
+        else if( y1 == y2)
             return Math.abs(x1 - x2);
         else if( x1 == x2)
             return Math.abs(y1 - y2);
         else
-            return 0.0;
+            return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
     }
 }
