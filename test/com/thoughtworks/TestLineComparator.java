@@ -7,7 +7,8 @@ public class TestLineComparator {
 
     @Test
     public void shouldReturnTrueComparingALineToItself(){
-        LineComparator lineComparator = new LineComparator(new Line(0, 0, 1, 1), new Line(0, 0, 1, 1));
+        Line line = new Line(0, 0, 1, 1);
+        LineComparator lineComparator = new LineComparator(line, line);
         Assert.assertEquals(true, lineComparator.checkIfEqual());
     }
 }
