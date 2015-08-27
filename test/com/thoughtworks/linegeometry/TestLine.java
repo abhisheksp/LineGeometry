@@ -86,4 +86,9 @@ public class TestLine {
     public void shouldNotBeEqualWhenComparingALineToNonLineEntity() {
         assertNotEquals(new Line(0, 0, 1, 1), "I am Not a Line");
     }
+
+    @Test
+    public void shouldBeEqual() {
+        assertNotEquals(new Line(0, 0, 1, 1), "I am Not a Line");
+    }
 }

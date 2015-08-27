@@ -21,6 +21,8 @@ public class Line {
     public boolean equals(Object o) {
         if (o == null || !(o instanceof Line))
             return false;
+        if(this == o)
+            return true;
         Line line = (Line) o;
         return line.x1 == this.x1 && line.y1 == this.y1 && line.x2 == this.x2 && line.y2 == this.y2 ||
                 line.x1 == this.x2 && line.y1 == this.y2 && line.x2 == this.x1 && line.y2 == this.y1;
