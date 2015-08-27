@@ -21,6 +21,8 @@ public class Point {
     public boolean equals(Object thatPoint) {
         if(thatPoint == null || !(thatPoint instanceof Point))
             return false;
+        if(this == thatPoint)
+            return true;
         Point that = (Point) thatPoint;
         return this.x1 == that.x1 && this.y1 == that.y1;
     }
