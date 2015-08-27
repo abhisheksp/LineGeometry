@@ -1,5 +1,7 @@
 package com.thoughtworks.linegeometry;
 
+import static java.lang.Math.*;
+
 public class Line {
 
     private int x1, x2, y1, y2;
@@ -12,12 +14,12 @@ public class Line {
     }
 
     public double length() {
-        return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
+        return sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2));
     }
 
     @Override
     public boolean equals(Object o) {
-        if(o == null || !(o instanceof Line))
+        if (o == null || !(o instanceof Line))
             return false;
         Line line = (Line) o;
         return line.x1 == this.x1 && line.y1 == this.y1 && line.x2 == this.x2 && line.y2 == this.y2 ||
