@@ -14,17 +14,29 @@ public class Line {
     }
 
     public double length() {
-        return sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2));
+        return sqrt(squareOfDifference(x1, x2) + squareOfDifference(y1, y2));
+    }
+
+    private double squareOfDifference(int value1, int value2) {
+        return pow(value1 - value2, 2);
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (o == null || !(o instanceof Line))
+    public boolean equals(Object that) {
+        if (that == null || !(that instanceof Line))
             return false;
-        if(this == o)
+        if(this == that)
             return true;
-        Line line = (Line) o;
-        return line.x1 == this.x1 && line.y1 == this.y1 && line.x2 == this.x2 && line.y2 == this.y2 ||
-                line.x1 == this.x2 && line.y1 == this.y2 && line.x2 == this.x1 && line.y2 == this.y1;
+        Line thatLine = (Line) that;
+        return compareTwoCoordinatePairsInterchangibly(thatLine.x1, thatLine.y1, thatLine.x2, thatLine.y2);
+    }
+
+    private boolean compareTwoCoordinatePairsInterchangibly(int otherX1, int otherY1, int otherX2, int otherY2) {
+        return compareTwoCoordinatePairs(otherX1, otherY1, otherX2, otherY2) ||
+                compareTwoCoordinatePairs(otherX2, otherY2, otherX1, otherY1);
+    }
+
+    private boolean compareTwoCoordinatePairs(int otherX1, int otherY1, int otherX2, int otherY2) {
+        return otherX1 == this.x1 && otherY1 == this.y1 && otherX2 == this.x2 && otherY2 == this.y2;
     }
 }
