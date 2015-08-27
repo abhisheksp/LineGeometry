@@ -1,7 +1,7 @@
 
 ##Description
 
-To Model a line to calculate it's length and check for Equaity between two lines.
+To Model a line to calculate it's length and check for Equality between two lines.
 
 ##Dependencies
     - JDK(1.6 or higher)
