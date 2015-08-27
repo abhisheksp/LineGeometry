@@ -1,7 +1,7 @@
 
 ##Description
 
-Given a line in Cartesian System, calculate its length.
+To Model a line to calculate it's length and check for Equaity between two lines.
 
 ##Dependencies
     - JDK(1.6 or higher)
