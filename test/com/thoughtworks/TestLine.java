@@ -47,4 +47,10 @@ public class TestLine {
         Line line = new Line(1, 3, 8, 5);
         assertEquals(7.28010, line.length(), 0.001);
     }
+
+    @Test
+    public void shouldReturnTrueComparingALineToItself() {
+        Line line = new Line(1, 3, 8, 5);
+        assertEquals(line, line);
+    }
 }
