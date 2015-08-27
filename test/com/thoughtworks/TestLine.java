@@ -49,18 +49,23 @@ public class TestLine {
     }
 
     @Test
-    public void shouldReturnTrueComparingALineToItself() {
+    public void shouldBeEqualWhenComparingALineToItself() {
         Line line = new Line(1, 3, 8, 5);
         assertEquals(line, line);
     }
 
     @Test
-    public void shouldReturnTrueComparingALineToAnotherLineWithSameCoordinates() {
+    public void shouldBeEqualWhenComparingALineToAnotherLineWithSameCoordinates() {
         assertEquals(new Line(0, 0, 1, 1), new Line(0, 0, 1, 1));
     }
 
     @Test
-    public void shouldReturnFalseComparingALineToAnotherLineWithDifferentCoordinates() {
+    public void shouldNotBeEqualWhenComparingALineToAnotherLineWithDifferentCoordinates() {
         assertNotEquals(new Line(0, 0, 1, 1), new Line(1, 1, 2, 2));
+    }
+
+    @Test
+    public void shouldBeEqualWhenComparingALineToAnotherLineWithInterchangedCoordinates() {
+        assertEquals(new Line(0, 0, 1, 1), new Line(1, 1, 0, 0));
     }
 }
