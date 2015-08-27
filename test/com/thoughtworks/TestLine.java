@@ -53,4 +53,9 @@ public class TestLine {
         Line line = new Line(1, 3, 8, 5);
         assertEquals(line, line);
     }
+
+    @Test
+    public void shouldReturnTrueComparingALineToAnotherLineWithSameCoordinates() {
+        assertEquals(new Line(0, 0, 1, 1), new Line(0, 0, 1, 1));
+    }
 }
