@@ -19,6 +19,7 @@
                 <pathelement location="out"/>
             </classpath>
             <test name="com.thoughtworks.linegeometry.TestLine"/>
+            <test name="com.thoughtworks.linegeometry.TestPoint"/>
         </junit>
     </target>
 </project>
