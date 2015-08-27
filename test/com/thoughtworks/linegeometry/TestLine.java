@@ -1,4 +1,4 @@
-package com.thoughtworks;
+package com.thoughtworks.linegeometry;
 
 import org.junit.Test;
 
@@ -80,5 +80,10 @@ public class TestLine {
     @Test
     public void shouldNotBeEqualWhenComparingALineToNull() {
         assertNotEquals(new Line(0, 0, 1, 1), null);
+    }
+
+    @Test
+    public void shouldNotBeEqualWhenComparingALineToNonLineEntity() {
+        assertNotEquals(new Line(0, 0, 1, 1), "I am Not a Line");
     }
 }

@@ -1,4 +1,4 @@
-package com.thoughtworks;
+package com.thoughtworks.linegeometry;
 
 public class Line {
 
@@ -17,7 +17,7 @@ public class Line {
 
     @Override
     public boolean equals(Object o) {
-        if(o == null)
+        if(o == null || !(o instanceof Line))
             return false;
         Line line = (Line) o;
         return line.x1 == this.x1 && line.y1 == this.y1 && line.x2 == this.x2 && line.y2 == this.y2 ||
