@@ -18,4 +18,9 @@ public class TestPoint {
     public void shouldNotBeEqualComparingAPointToNull() {
         assertNotEquals(new Point(1, 2), null);
     }
+
+    @Test
+    public void shouldNotBeEqualComparingAPointToNonPointEntity() {
+        assertNotEquals(new Point(1, 2), "Not a Point!");
+    }
 }
