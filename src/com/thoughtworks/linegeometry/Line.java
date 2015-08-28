@@ -34,4 +34,9 @@ public class Line {
         return (this.pointOne.equals(thatLinePointOne) && this.pointTwo.equals(thatLingPointTwo)) ||
                 (this.pointOne.equals(thatLingPointTwo) && this.pointTwo.equals(thatLinePointOne));
     }
+
+    @Override
+    public int hashCode() {
+        return pointOne.hashCode() * pointTwo.hashCode();
+    }
 }
