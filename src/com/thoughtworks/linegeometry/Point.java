@@ -1,5 +1,7 @@
 package com.thoughtworks.linegeometry;
 
+import static java.lang.Math.pow;
+
 public class Point {
 
     private int x1, y1;
@@ -19,11 +21,16 @@ public class Point {
 
     @Override
     public boolean equals(Object thatPoint) {
-        if(thatPoint == null || !(thatPoint instanceof Point))
+        if (thatPoint == null || !(thatPoint instanceof Point))
             return false;
-        if(this == thatPoint)
+        if (this == thatPoint)
             return true;
         Point that = (Point) thatPoint;
         return this.x1 == that.x1 && this.y1 == that.y1;
+    }
+
+    @Override
+    public int hashCode() {
+        return (int) pow(x1, y1) % Integer.MAX_VALUE;
     }
 }
