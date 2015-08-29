@@ -7,9 +7,9 @@ public class Line {
     private Point pointOne;
     private Point pointTwo;
 
-    public Line(int x1, int y1, int x2, int y2) {
-        this.pointOne = new Point(x1, y1);
-        this.pointTwo = new Point(x2, y2);
+    public Line(Point pointOne, Point pointTwo) {
+        this.pointOne = pointOne;
+        this.pointTwo = pointTwo;
     }
 
     public double length() {
