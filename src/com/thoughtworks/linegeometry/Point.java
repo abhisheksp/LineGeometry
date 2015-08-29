@@ -1,6 +1,6 @@
 package com.thoughtworks.linegeometry;
 
-import static java.lang.Math.pow;
+import static java.lang.Math.*;
 
 public class Point {
 
@@ -9,14 +9,6 @@ public class Point {
     public Point(int x1, int y1) {
         this.x1 = x1;
         this.y1 = y1;
-    }
-
-    public int differenceOfXCoordinates(Point that) {
-        return this.x1 - that.x1;
-    }
-
-    public int differenceOfYCoordinates(Point that) {
-        return this.y1 - that.y1;
     }
 
     @Override
@@ -32,5 +24,9 @@ public class Point {
     @Override
     public int hashCode() {
         return (int) pow(x1, y1) % Integer.MAX_VALUE;
+    }
+
+    public double distanceTo(Point that) {
+        return sqrt(pow(this.x1 - that.x1, 2) + pow(this.y1 - that.y1, 2));
     }
 }

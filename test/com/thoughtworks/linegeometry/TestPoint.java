@@ -22,4 +22,21 @@ public class TestPoint {
     public void shouldNotBeEqualComparingAPointToNonPointEntity() {
         assertNotEquals(new Point(1, 2), "Not a Point!");
     }
+
+    @Test
+    public void shouldBeZeroCalculatingDistanceFromOnePointToItself() {
+        Point point = new Point(1, 2);
+
+        assertEquals(0.0, point.distanceTo(point), 0.0001);
+    }
+
+    @Test
+    public void shouldNotBeZeroCalculatingDistanceFromOnePointToAnotherPointWithDifferentCoordinates() {
+        assertNotEquals(0.0, new Point(3, 4).distanceTo(new Point(5, 6)), 0.0001);
+    }
+
+    @Test
+    public void shouldBeZeroCalculatingDistanceFromOnePointToAnotherPointWithSameCoordinates() {
+        assertEquals(0.0, new Point(3, 4).distanceTo(new Point(3, 4)), 0.0001);
+    }
 }

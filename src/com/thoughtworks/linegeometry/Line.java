@@ -13,7 +13,7 @@ public class Line {
     }
 
     public double length() {
-        return sqrt(square(pointOne.differenceOfXCoordinates(pointTwo)) + square(pointOne.differenceOfYCoordinates(pointTwo)));
+        return pointOne.distanceTo(pointTwo);
     }
 
     private double square(int value) {
