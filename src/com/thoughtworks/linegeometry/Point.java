@@ -27,6 +27,14 @@ public class Point {
     }
 
     public double distanceTo(Point that) {
-        return sqrt(pow(this.x1 - that.x1, 2) + pow(this.y1 - that.y1, 2));
+        return sqrt(SquareOfDifferenceOfXCoordinates(that) + SquareOfDifferenceOfYCoordinates(that));
+    }
+
+    private double SquareOfDifferenceOfYCoordinates(Point that) {
+        return pow(this.y1 - that.y1, 2);
+    }
+
+    private double SquareOfDifferenceOfXCoordinates(Point that) {
+        return pow(this.x1 - that.x1, 2);
     }
 }
