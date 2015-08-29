@@ -1,7 +1,5 @@
 package com.thoughtworks.linegeometry;
 
-import static java.lang.Math.*;
-
 public class Line {
 
     private Point pointOne;
@@ -14,10 +12,6 @@ public class Line {
 
     public double length() {
         return pointOne.distanceTo(pointTwo);
-    }
-
-    private double square(int value) {
-        return pow(value, 2);
     }
 
     @Override
