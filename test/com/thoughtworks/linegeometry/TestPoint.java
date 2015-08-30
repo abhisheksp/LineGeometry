@@ -24,6 +24,11 @@ public class TestPoint {
     }
 
     @Test
+    public void shouldBeEqualComparingAPointToAnotherPointWithSameCoordinates() {
+        assertEquals(new Point(1, 2), new Point(1, 2));
+    }
+
+    @Test
     public void shouldBeZeroCalculatingDistanceFromOnePointToItself() {
         Point point = new Point(1, 2);
 

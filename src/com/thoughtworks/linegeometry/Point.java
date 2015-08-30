@@ -12,18 +12,12 @@ public class Point {
     }
 
     @Override
-    public boolean equals(Object thatPoint) {
-        if (thatPoint == null || !(thatPoint instanceof Point))
-            return false;
-        if (this == thatPoint)
-            return true;
-        Point that = (Point) thatPoint;
-        return this.x1 == that.x1 && this.y1 == that.y1;
-    }
-
-    @Override
-    public int hashCode() {
-        return (int) pow(x1, y1) % Integer.MAX_VALUE;
+    public boolean equals(Object that) {
+        if (this == that) return true;
+        if (that == null || getClass() != that.getClass()) return false;
+        Point thatPoint = (Point) that;
+        if (this.x1 != thatPoint.x1) return false;
+        return this.y1 == thatPoint.y1;
     }
 
     public double distanceTo(Point that) {
