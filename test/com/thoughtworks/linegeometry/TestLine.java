@@ -90,6 +90,12 @@ public class TestLine {
     @Test
     public void shouldHaveSameHashCodeComparingALineToItself() {
         Line line = new Line(new Point(3, 4), new Point(3, 4));
+
         assertEquals(line.hashCode(), line.hashCode());
+    }
+
+    @Test
+    public void shouldHaveSameHashCodeComparingALineToAnotherLineWithSameCoordinates() {
+        assertEquals(new Line(new Point(5, 6), new Point(5, 6)), new Line(new Point(5, 6), new Point(5, 6)));
     }
 }
