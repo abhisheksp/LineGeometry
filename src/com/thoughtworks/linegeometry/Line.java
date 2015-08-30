@@ -16,16 +16,14 @@ public class Line {
 
     @Override
     public boolean equals(Object that) {
-        if (that == null || !(that instanceof Line))
-            return false;
-        if (this == that)
-            return true;
+        if (this == that) return true;
+        if (that == null || getClass() != that.getClass()) return false;
         Line thatLine = (Line) that;
         return compareTwoPointsInterchangibly(thatLine.pointOne, thatLine.pointTwo);
     }
 
-    private boolean compareTwoPointsInterchangibly(Point thatLinePointOne, Point thatLingPointTwo) {
-        return (this.pointOne.equals(thatLinePointOne) && this.pointTwo.equals(thatLingPointTwo)) ||
-                (this.pointOne.equals(thatLingPointTwo) && this.pointTwo.equals(thatLinePointOne));
+    private boolean compareTwoPointsInterchangibly(Point thatLinePointOne, Point thatLinePointTwo) {
+        return (this.pointOne.equals(thatLinePointOne) && this.pointTwo.equals(thatLinePointTwo)) ||
+                (this.pointOne.equals(thatLinePointTwo) && this.pointTwo.equals(thatLinePointOne));
     }
 }
