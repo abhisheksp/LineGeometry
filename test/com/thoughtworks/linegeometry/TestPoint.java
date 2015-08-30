@@ -36,6 +36,11 @@ public class TestPoint {
     }
 
     @Test
+    public void shouldHaveSameHashCodeComparingAPointToAnotherPointWithSameCoordinates() {
+        assertEquals(new Point(9,10), new Point(9, 10));
+    }
+
+    @Test
     public void shouldBeZeroCalculatingDistanceFromOnePointToItself() {
         Point point = new Point(1, 2);
 
