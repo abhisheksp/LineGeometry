@@ -29,6 +29,13 @@ public class TestPoint {
     }
 
     @Test
+    public void shouldHaveSameHashCodeComparingAPointToItself() {
+        Point point = new Point(1, 2);
+
+        assertEquals(point.hashCode(), point.hashCode());
+    }
+
+    @Test
     public void shouldBeZeroCalculatingDistanceFromOnePointToItself() {
         Point point = new Point(1, 2);
 

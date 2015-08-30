@@ -20,6 +20,13 @@ public class Point {
         return this.y1 == thatPoint.y1;
     }
 
+    @Override
+    public int hashCode() {
+        int result = x1;
+        result = 31 * result + y1;
+        return result;
+    }
+
     public double distanceTo(Point that) {
         return sqrt(SquareOfDifferenceOfXCoordinates(that) + SquareOfDifferenceOfYCoordinates(that));
     }
