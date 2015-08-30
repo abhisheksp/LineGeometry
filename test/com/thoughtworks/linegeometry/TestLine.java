@@ -63,17 +63,17 @@ public class TestLine {
     }
 
     @Test
-    public void shouldBeEqualWhenComparingALineToAnotherLineWithSameCoordinates() {
+    public void shouldBeEqualWhenComparingALineToAnotherLineWithSameEndPoints() {
         assertEquals(new Line(new Point(1, 1), new Point(2, 2)), new Line(new Point(1, 1), new Point(2, 2)));
     }
 
     @Test
-    public void shouldNotBeEqualWhenComparingALineToAnotherLineWithDifferentCoordinates() {
+    public void shouldNotBeEqualWhenComparingALineToAnotherLineWithDifferentEndPoints() {
         assertNotEquals(new Line(new Point(1, 1), new Point(2, 2)), new Line(new Point(3, 4), new Point(5, 6)));
     }
 
     @Test
-    public void shouldBeEqualWhenComparingALineToAnotherLineWithInterchangedCoordinates() {
+    public void shouldBeEqualWhenComparingALineToAnotherLineWithInterchangedEndPoints() {
         assertEquals(new Line(new Point(3, 4), new Point(5, 6)), new Line(new Point(5, 6), new Point(3, 4)));
     }
 
@@ -85,5 +85,11 @@ public class TestLine {
     @Test
     public void shouldNotBeEqualWhenComparingALineToNonLineEntity() {
         assertNotEquals(new Line(new Point(0, 0), new Point(6, 6)), "I am Not a Line");
+    }
+
+    @Test
+    public void shouldHaveSameHashCodeComparingALineToItself() {
+        Line line = new Line(new Point(3, 4), new Point(3, 4));
+        assertEquals(line.hashCode(), line.hashCode());
     }
 }
