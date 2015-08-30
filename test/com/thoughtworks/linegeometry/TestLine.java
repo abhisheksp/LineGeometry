@@ -98,4 +98,9 @@ public class TestLine {
     public void shouldHaveSameHashCodeComparingALineToAnotherLineWithSameCoordinates() {
         assertEquals(new Line(new Point(5, 6), new Point(5, 6)), new Line(new Point(5, 6), new Point(5, 6)));
     }
+
+    @Test
+    public void shouldHaveDifferentHashCodeComparingALineToAnotherLineWithDifferentCoordinates() {
+        assertNotEquals(new Line(new Point(5, 6), new Point(5, 6)), new Line(new Point(20, 30), new Point(40, 50)));
+    }
 }
